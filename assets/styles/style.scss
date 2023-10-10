@@ -1,0 +1,53 @@
+//Variables
+
+$color-primary: #A491D2;
+$color-secondary: #BEC1BB;
+$color-dark: #1B1F21;
+$color-white: #fff;
+
+$sidebar-width: 300px;
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+//Ajustes
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  @include flexRow;
+}
+
+.sidebar {
+  @include flexCol;
+  width: $sidebar-width;
+  height: 100vh;
+  background-color: $color-white;
+  height: 100vh;
+}
+
+.main {
+  @include flexCenter;
+  background-color: #eaeaea;
+  width: calc(100vw - $sidebar-width);
+  height: 100vh;
+}
