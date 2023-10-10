@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 section {
@@ -20,19 +22,38 @@ section {
 }
 .sidebar > * {
   width: 100%;
-  padding: 1.2rem;
+  padding: 1.2rem 2rem;
 }
 .sidebar .profile {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
 }
 .sidebar .profile .thumbnail {
-  width: 50px;
+  width: 70px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background-color: #A491D2;
+  overflow: hidden;
+}
+.sidebar .profile .thumbnail img {
+  width: 100%;
+}
+.sidebar .profile .info {
+  width: 100%;
+  padding: 0.5rem;
+}
+.sidebar .profile .info p {
+  color: gray;
+  font-size: 0.8rem;
+  font-weight: light;
+}
+.sidebar .profile .p-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 50px;
 }
 .sidebar .button-container {
   display: flex;
@@ -40,14 +61,17 @@ section {
   justify-content: center;
   width: 100%;
   height: 100px;
-  background-color: #eaeaea;
+  background-color: #f7f7f7;
 }
-.sidebar .button-container button {
+.sidebar .button-container .new-chat {
   width: 75%;
   padding: 1.2rem;
   background-color: #A491D2;
   border: none;
   color: white;
+}
+.sidebar .button-container .new-chat:hover {
+  background-color: #CDC3E6;
 }
 
 .main {

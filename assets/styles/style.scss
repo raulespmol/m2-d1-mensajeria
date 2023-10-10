@@ -27,10 +27,13 @@ $sidebar-width: 300px;
 
 
 //Ajustes
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 section {
@@ -44,29 +47,52 @@ section {
   background-color: $color-white;
   & > *{
     width: 100%;
-    padding: 1.2rem;
+    padding: 1.2rem 2rem;
   }
   .profile {
     @include flexRow;
-    gap: 1rem;
+    justify-content: space-between;
     .thumbnail {
-      width: 50px;
+      width: 70px;
       aspect-ratio: 1;
       border-radius: 50%;
-      background-color: $color-primary; //mientras cargo las fotos
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    .info {
+      width: 100%;
+      padding: 0.5rem;
+      p{
+        color: gray;
+        font: {
+          size: 0.8rem;
+          weight: light;
+        }
+      }
+    }
+    .p-buttons {
+      @include flexCenter;
+      gap: 10px;
+      width: 50px;
     }
   }
+  
   .button-container {
     @include flexCenter;
     width: 100%;
     height: 100px;
-    background-color: #eaeaea;
-    button {
+    background-color: #f7f7f7;
+    .new-chat {
       width: 75%;
       padding: 1.2rem;
       background-color: $color-primary;
       border: none;
       color: white;
+      &:hover {
+        background-color: #CDC3E6;
+      }
     }
   }
 }
