@@ -42,16 +42,36 @@ section {
   height: 100vh;
   width: $sidebar-width;
   background-color: $color-white;
+  & > *{
+    width: 100%;
+    padding: 1.2rem;
+  }
   .profile {
     @include flexRow;
+    gap: 1rem;
     .thumbnail {
-      width: 80px;
+      width: 50px;
       aspect-ratio: 1;
       border-radius: 50%;
       background-color: $color-primary; //mientras cargo las fotos
     }
   }
+  .button-container {
+    @include flexCenter;
+    width: 100%;
+    height: 100px;
+    background-color: #eaeaea;
+    button {
+      width: 75%;
+      padding: 1.2rem;
+      background-color: $color-primary;
+      border: none;
+      color: white;
+    }
+  }
 }
+
+
 
 .main {
   @include flexCenter;

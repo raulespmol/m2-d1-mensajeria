@@ -18,16 +18,36 @@ section {
   width: 300px;
   background-color: #fff;
 }
+.sidebar > * {
+  width: 100%;
+  padding: 1.2rem;
+}
 .sidebar .profile {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 1rem;
 }
 .sidebar .profile .thumbnail {
-  width: 80px;
+  width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: #A491D2;
+}
+.sidebar .button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  background-color: #eaeaea;
+}
+.sidebar .button-container button {
+  width: 75%;
+  padding: 1.2rem;
+  background-color: #A491D2;
+  border: none;
+  color: white;
 }
 
 .main {
