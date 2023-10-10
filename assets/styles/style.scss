@@ -5,7 +5,8 @@ $color-secondary: #BEC1BB;
 $color-dark: #1B1F21;
 $color-white: #fff;
 
-$sidebar-width: 300px;
+$sidebar-width: 350px;
+$sidebar-gap: 1px;
 
 @mixin flexRow {
   display: flex;
@@ -34,6 +35,7 @@ $sidebar-width: 300px;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  color: $color-dark;
 }
 
 section {
@@ -44,10 +46,13 @@ section {
   @include flexCol;
   height: 100vh;
   width: $sidebar-width;
-  background-color: $color-white;
+  background-color: #e3e3e3;
+  gap: $sidebar-gap;
+  padding: $sidebar-gap;
   & > *{
     width: 100%;
     padding: 1.2rem 2rem;
+    background-color: #FFF;
   }
   .profile {
     @include flexRow;
@@ -75,23 +80,32 @@ section {
     .p-buttons {
       @include flexCenter;
       gap: 10px;
-      width: 50px;
+      width: 80px;
+      i {
+        font-size: 1.5rem;
+        color: $color-secondary;
+        &:hover {
+          cursor: pointer;
+          color: $color-dark;
+        }
+      }
     }
   }
   
   .button-container {
     @include flexCenter;
-    width: 100%;
     height: 100px;
-    background-color: #f7f7f7;
     .new-chat {
       width: 75%;
       padding: 1.2rem;
       background-color: $color-primary;
       border: none;
       color: white;
+      font-size: 1.3rem;
+      font-weight: 500;
       &:hover {
         background-color: #CDC3E6;
+        cursor: pointer;
       }
     }
   }
