@@ -117,6 +117,7 @@ section {
   .contacts {
     @include flexCol;
     overflow-y: auto;
+    padding: 0 2rem;
     .contact {
       @include flexRow;
       width: 100%;
