@@ -16,7 +16,7 @@ $sidebar-width: 300px;
 @mixin flexCol {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 @mixin flexCenter {
@@ -39,15 +39,26 @@ section {
 
 .sidebar {
   @include flexCol;
+  height: 100vh;
   width: $sidebar-width;
-  height: 100vh;
   background-color: $color-white;
-  height: 100vh;
 }
 
 .main {
   @include flexCenter;
-  background-color: #eaeaea;
-  width: calc(100vw - $sidebar-width);
   height: 100vh;
+  width: calc(100vw - $sidebar-width);
+  background-color: #eaeaea;
+  .main-content {
+    @include flexCol;
+    gap: 1rem;
+    max-width: 400px;
+    img{
+      width: 200px;
+    }
+    .main-text {
+      @include flexCol;
+      text-align: center;
+    }
+  }
 }
