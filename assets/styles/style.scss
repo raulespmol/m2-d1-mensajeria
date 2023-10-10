@@ -42,6 +42,15 @@ section {
   height: 100vh;
   width: $sidebar-width;
   background-color: $color-white;
+  .profile {
+    @include flexRow;
+    .thumbnail {
+      width: 80px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: $color-primary; //mientras cargo las fotos
+    }
+  }
 }
 
 .main {

@@ -18,6 +18,17 @@ section {
   width: 300px;
   background-color: #fff;
 }
+.sidebar .profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.sidebar .profile .thumbnail {
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #A491D2;
+}
 
 .main {
   display: flex;
