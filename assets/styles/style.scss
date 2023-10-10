@@ -26,6 +26,16 @@ $sidebar-gap: 1px;
   justify-content: center;
 }
 
+@mixin thumbnail($size) {
+  width: $size;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  &> img {
+    width: 100%;
+  }
+}
+
 
 //Ajustes
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
@@ -58,13 +68,7 @@ section {
     @include flexRow;
     justify-content: space-between;
     .thumbnail {
-      width: 70px;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      overflow: hidden;
-      img {
-        width: 100%;
-      }
+      @include thumbnail(70px);
     }
     .info {
       width: 100%;
@@ -106,6 +110,34 @@ section {
       &:hover {
         background-color: #CDC3E6;
         cursor: pointer;
+      }
+    }
+  }
+
+  .contacts {
+    @include flexCol;
+    overflow-y: auto;
+    .contact {
+      @include flexRow;
+      width: 100%;
+      .contact-thumbnail {
+        @include thumbnail(60px);
+        background-color: #1B1F21 //temporal;
+      }
+      .contact-info {
+        flex: 1;
+        padding: 1rem;
+        .contact-name {
+          font-size: 1.1rem;
+          font-weight: bold;
+        }
+        .contact-message {
+          color: gray;
+          font: {
+            size: 0.8rem;
+            weight: light;
+          }
+        }
       }
     }
   }

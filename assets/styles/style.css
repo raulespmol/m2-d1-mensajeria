@@ -40,7 +40,7 @@ section {
   border-radius: 50%;
   overflow: hidden;
 }
-.sidebar .profile .thumbnail img {
+.sidebar .profile .thumbnail > img {
   width: 100%;
 }
 .sidebar .profile .info {
@@ -85,6 +85,41 @@ section {
 .sidebar .button-container .new-chat:hover {
   background-color: #CDC3E6;
   cursor: pointer;
+}
+.sidebar .contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+.sidebar .contacts .contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.sidebar .contacts .contact .contact-thumbnail {
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #1B1F21;
+}
+.sidebar .contacts .contact .contact-thumbnail > img {
+  width: 100%;
+}
+.sidebar .contacts .contact .contact-info {
+  flex: 1;
+  padding: 1rem;
+}
+.sidebar .contacts .contact .contact-info .contact-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.sidebar .contacts .contact .contact-info .contact-message {
+  color: gray;
+  font-size: 0.8rem;
+  font-weight: light;
 }
 
 .main {
