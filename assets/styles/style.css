@@ -93,6 +93,10 @@ section {
   align-items: center;
   overflow-y: auto;
   width: 100%;
+  /* &:hover.contacts::-webkit-scrollbar{
+    width: 10px;
+    background: transparent;
+  } */
 }
 .sidebar .contacts .contact {
   display: flex;
@@ -128,15 +132,11 @@ section {
   background-color: #eaeaea;
 }
 .sidebar .contacts::-webkit-scrollbar {
-  width: 0px;
+  width: 5px;
 }
 .sidebar .contacts::-webkit-scrollbar-thumb {
   background-color: #A491D2;
   border-radius: 5px;
-}
-.sidebar .contacts:hover.contacts::-webkit-scrollbar {
-  width: 10px;
-  background: transparent;
 }
 
 .main {

@@ -156,16 +156,16 @@ section {
     }
 
     &::-webkit-scrollbar {
-      width: 0px;
+      width: 5px;
     }
     &::-webkit-scrollbar-thumb {
       background-color: $color-primary;
       border-radius: 5px;
     }
-    &:hover.contacts::-webkit-scrollbar{
+    /* &:hover.contacts::-webkit-scrollbar{
       width: 10px;
       background: transparent;
-    }
+    } */
   }
 }
 
