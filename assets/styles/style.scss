@@ -7,6 +7,7 @@ $color-white: #fff;
 
 $sidebar-width: 350px;
 $sidebar-gap: 1px;
+$sidebar-element-padding: 1.2rem 2rem;
 
 @mixin flexRow {
   display: flex;
@@ -52,6 +53,7 @@ section {
   @include flexRow;
 }
 
+//contenedor principal de la sidebar
 .sidebar {
   @include flexCol;
   height: 100vh;
@@ -61,12 +63,15 @@ section {
   padding: $sidebar-gap;
   & > *{
     width: 100%;
-    padding: 1.2rem 2rem;
+    // padding: 1.2rem 2rem;
     background-color: #FFF;
   }
-  .profile {
+
+  //seccion perfil de usuario
+  .profile { 
     @include flexRow;
     justify-content: space-between;
+    padding: $sidebar-element-padding;
     .thumbnail {
       @include thumbnail(70px);
     }
@@ -96,9 +101,11 @@ section {
     }
   }
   
+  //contenedor del boton
   .button-container {
     @include flexCenter;
     height: 100px;
+    padding: $sidebar-element-padding;
     .new-chat {
       width: 75%;
       padding: 1.2rem;
@@ -114,13 +121,15 @@ section {
     }
   }
 
-  .contacts {
+  //seccion lista de contactos
+  .contacts { 
     @include flexCol;
     overflow-y: auto;
-    padding: 0 2rem;
+    width: 100%;
     .contact {
       @include flexRow;
       width: 100%;
+      padding: 0.5rem 2rem;
       .contact-thumbnail {
         @include thumbnail(60px);
         background-color: #1B1F21 //temporal;
@@ -140,6 +149,22 @@ section {
           }
         }
       }
+
+      &:hover {
+        background-color: #eaeaea;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-primary;
+      border-radius: 5px;
+    }
+    &:hover.contacts::-webkit-scrollbar{
+      width: 10px;
+      background: transparent;
     }
   }
 }
