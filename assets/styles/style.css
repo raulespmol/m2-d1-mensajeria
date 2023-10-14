@@ -52,6 +52,10 @@ section {
   font-size: 0.8rem;
   font-weight: light;
 }
+.sidebar .profile .info p i {
+  color: #45e045;
+  font-size: 0.8em;
+}
 .sidebar .profile .p-buttons {
   display: flex;
   align-items: center;

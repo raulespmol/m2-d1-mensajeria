@@ -7,7 +7,6 @@ $color-white: #fff;
 
 $sidebar-width: 350px;
 $sidebar-gap: 1px;
-$sidebar-element-padding: 2rem;
 
 @mixin flexRow {
   display: flex;
@@ -71,7 +70,7 @@ section {
   .profile { 
     @include flexRow;
     justify-content: space-between;
-    padding: 0.7rem $sidebar-element-padding;
+    padding: 0.7rem 2rem;
     .thumbnail {
       @include thumbnail(70px);
     }
@@ -79,6 +78,10 @@ section {
       width: 100%;
       padding: 0.5rem;
       p{
+        i {
+          color: #45e045;
+          font-size: 0.8em;
+        }
         color: gray;
         font: {
           size: 0.8rem;
