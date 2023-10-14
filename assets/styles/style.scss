@@ -7,7 +7,7 @@ $color-white: #fff;
 
 $sidebar-width: 350px;
 $sidebar-gap: 1px;
-$sidebar-element-padding: 1.2rem 2rem;
+$sidebar-element-padding: 2rem;
 
 @mixin flexRow {
   display: flex;
@@ -71,7 +71,7 @@ section {
   .profile { 
     @include flexRow;
     justify-content: space-between;
-    padding: $sidebar-element-padding;
+    padding: 0.7rem $sidebar-element-padding;
     .thumbnail {
       @include thumbnail(70px);
     }
@@ -105,7 +105,7 @@ section {
   .button-container {
     @include flexCenter;
     height: 100px;
-    padding: $sidebar-element-padding;
+    padding: 70px 0;
     .new-chat {
       width: 75%;
       padding: 1.2rem;
@@ -162,10 +162,6 @@ section {
       background-color: $color-primary;
       border-radius: 5px;
     }
-    /* &:hover.contacts::-webkit-scrollbar{
-      width: 10px;
-      background: transparent;
-    } */
   }
 }
 
