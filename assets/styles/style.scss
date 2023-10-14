@@ -159,11 +159,11 @@ section {
     }
 
     &::-webkit-scrollbar {
+      background-color: #a591d27d;
       width: 5px;
     }
     &::-webkit-scrollbar-thumb {
       background-color: $color-primary;
-      border-radius: 5px;
     }
   }
 }
@@ -178,13 +178,20 @@ section {
   .main-content {
     @include flexCol;
     gap: 1rem;
-    max-width: 400px;
+    max-width: 600px;
     img{
-      width: 200px;
+      width: 300px;
     }
     .main-text {
       @include flexCol;
       text-align: center;
+      h2 {
+        font-size: 3rem;
+        font-weight: 500;
+      }
+      p {
+        font-size: 1.2rem;
+      }
     }
   }
 }
